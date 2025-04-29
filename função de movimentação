@@ -1,0 +1,12 @@
+void movimentação(int i, int j, int value){
+  int i_new = (int)random(i-1,i+1);
+  int j_new = (int)random(j-1,j+1);
+  
+  
+  int tempo_reacao = (int)random(1,10);
+  
+  if(grid[i_new][j_new] == 0){
+    grid[i][j] = 0;
+    grid[i_new][j_new] = value;
+    delay(tempo_reacao);
+  }
